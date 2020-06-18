@@ -1,1 +1,1 @@
-ldapwhoami -Q | cut -d ":" -f2 | cut -d "," -f1,3,4,5,6
+ldapsearch "uid=z*" cn | sort -r | grep -v '#\|dn\|search\|result\|^[[:space:]]*$'
