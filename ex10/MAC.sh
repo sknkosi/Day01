@@ -1,1 +1,2 @@
-ifconfig | grep ether | cut -d' ' -f2
+#!/bin/bash
+ifconfig | grep "ether " | sed 's/\(.*\)ether //g; s/ //g'
